@@ -96,23 +96,20 @@ html {
         width : calc((100% - 7px) / 4);
       });
 
-      &:hover, &.active {
-        background-color : rgba(0, 0, 0, 0.8);
-        color            : #FFF;
+      .isolateDesktops({
+        &:hover, &.active {
+          background-color : rgba(0, 0, 0, 0.8);
+          color            : #FFF;
 
-        i {
-          display : none;
+          i {
+            display : none;
+          }
 
-          .isolatePhones({
-            display     : inline;
-            color       : #FFF;
-          });
+          span {
+            color : #FFF;
+          }
         }
-
-        span {
-          color : #FFF;
-        }
-      }
+      });
 
       i {
         display : none;

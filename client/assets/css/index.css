@@ -235,25 +235,20 @@ html nav a {
     width: calc(23.25%);
   }
 }
-html nav a:hover,
-html nav a.active {
-  background-color: rgba(0, 0, 0, 0.8);
-  color: #FFF;
-}
-html nav a:hover i,
-html nav a.active i {
-  display: none;
-}
-@media only screen and (max-device-width: 415px), only screen and (max-width: 415px) {
-  html nav a:hover i,
-  html nav a.active i {
-    display: inline;
+@media only screen and (min-width: 769px) {
+  html nav a:hover,
+  html nav a.active {
+    background-color: rgba(0, 0, 0, 0.8);
     color: #FFF;
   }
-}
-html nav a:hover span,
-html nav a.active span {
-  color: #FFF;
+  html nav a:hover i,
+  html nav a.active i {
+    display: none;
+  }
+  html nav a:hover span,
+  html nav a.active span {
+    color: #FFF;
+  }
 }
 html nav a i {
   display: none;
