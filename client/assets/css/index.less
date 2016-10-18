@@ -97,7 +97,7 @@ html {
       });
 
       .isolateDesktops({
-        &:hover, &.active {
+        &:hover {
           background-color : rgba(0, 0, 0, 0.8);
           color            : #FFF;
 
@@ -110,6 +110,19 @@ html {
           }
         }
       });
+
+      &.active {
+        background-color : rgba(0, 0, 0, 0.8);
+        color            : #FFF;
+
+        i {
+          display : none;
+        }
+
+        span {
+          color : #FFF;
+        }
+      }
 
       i {
         display : none;
