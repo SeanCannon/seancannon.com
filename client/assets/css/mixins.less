@@ -133,8 +133,8 @@
 }
 
 .isolateTablets(@rules) {
-  @media only screen and (min-width : 415px) and (max-width : 769px),
-         only screen and (min-device-width : 415px) and (max-device-width : 769px) {
+  @media only screen and (min-width : 525px) and (max-width : 769px),
+         only screen and (min-device-width : 525px) and (max-device-width : 769px) {
     @rules();
   }
 }
@@ -147,8 +147,8 @@
 }
 
 .isolatePhones(@rules) {
-  @media only screen and (max-device-width : 415px),
-         only screen and (max-width : 415px) {
+  @media only screen and (max-device-width : 525px),
+         only screen and (max-width : 525px) {
     @rules();
   }
 }
