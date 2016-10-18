@@ -308,6 +308,7 @@ html section {
     left: 10px;
     width: auto;
     right: 10px;
+    -webkit-overflow-scrolling: touch;
   }
 }
 html section:target {
