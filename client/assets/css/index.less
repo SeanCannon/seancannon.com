@@ -80,19 +80,20 @@ html {
     });
 
     a {
-      width           : calc((100% - 3px) / 4);
-      text-align      : center;
-      text-decoration : none;
-      text-transform  : uppercase;
-      font-size       : 0.6em;
-      display         : inline-block;
-      margin          : 0;
-      padding         : 0;
-      border          : none;
-      position        : relative;
-      top             : -0.25em;
+      width                       : calc((100% - 3px) / 4);
+      text-align                  : center;
+      text-decoration             : none;
+      text-transform              : uppercase;
+      font-size                   : 0.6em;
+      display                     : inline-block;
+      margin                      : 0;
+      padding                     : 0;
+      border                      : none;
+      position                    : relative;
+      top                         : -0.25em;
+      -webkit-tap-highlight-color : rgba(0, 0, 0, 0.8);
 
-      .isolatePhones({
+      .isolatePhonesAndTablets({
         width : calc((100% - 7px) / 4);
       });
 
@@ -111,23 +112,37 @@ html {
         }
       });
 
-      &.active {
+      &:active, &.active {
         background-color : rgba(0, 0, 0, 0.8);
         color            : #FFF;
 
-        i {
-          display : none;
-        }
+        .isolateDesktops({
+          i {
+            display : none;
+          }
 
-        span {
-          color : #FFF;
-        }
+          span {
+            color : #FFF;
+          }
+        });
+
+        .isolatePhonesAndTablets({
+          i {
+            display : inline;
+            color   : #FFF;
+          }
+
+          span {
+            display : none;
+          }
+        });
+
       }
 
       i {
         display : none;
 
-        .isolatePhones({
+        .isolatePhonesAndTablets({
           display     : inline;
           color       : #000;
           font-size   : 1.6em !important;
@@ -140,7 +155,7 @@ html {
         color       : #000;
         font-weight : 400;
 
-        .isolatePhones({
+        .isolatePhonesAndTablets({
           display : none;
         });
       }
@@ -153,10 +168,14 @@ html {
     line-height    : 1.3em;
     text-align     : justify;
     font-size      : 0.8em;
+
+    .isolatePhonesAndTablets({
+      font-weight : 200;
+    });
   }
 
   section {
-    background-color : rgba(0, 0, 0, 0.2);
+    background-color : rgba(0, 0, 0, 0.3);
     color            : rgba(255, 255, 255, 1);
     position         : absolute;
     z-index          : 1;
@@ -168,6 +187,13 @@ html {
     overflow-y       : scroll;
     transition       : all linear 0.3s;
     font-weight      : 800;
+
+    &#portfolio {
+      a {
+        text-decoration : none;
+        font-weight     : 500;
+      }
+    }
 
     .isolatePhones({
       left                       : 10px;
@@ -252,9 +278,15 @@ html {
             }
 
             span {
+              font-weight : 200;
+
               &.mobile {
                 display : none;
               }
+
+              .isolatePhonesAndTablets({
+                font-weight : 300;
+              });
 
               .isolatePhones({
                 &.mobile {

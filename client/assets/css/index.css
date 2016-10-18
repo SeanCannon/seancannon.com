@@ -229,8 +229,9 @@ html nav a {
   border: none;
   position: relative;
   top: -0.25em;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.8);
 }
-@media only screen and (max-device-width: 415px), only screen and (max-width: 415px) {
+@media only screen and (max-device-width: 769px), only screen and (max-width: 769px) {
   html nav a {
     width: calc(23.25%);
   }
@@ -247,20 +248,36 @@ html nav a {
     color: #FFF;
   }
 }
+html nav a:active,
 html nav a.active {
   background-color: rgba(0, 0, 0, 0.8);
   color: #FFF;
 }
-html nav a.active i {
-  display: none;
+@media only screen and (min-width: 769px) {
+  html nav a:active i,
+  html nav a.active i {
+    display: none;
+  }
+  html nav a:active span,
+  html nav a.active span {
+    color: #FFF;
+  }
 }
-html nav a.active span {
-  color: #FFF;
+@media only screen and (max-device-width: 769px), only screen and (max-width: 769px) {
+  html nav a:active i,
+  html nav a.active i {
+    display: inline;
+    color: #FFF;
+  }
+  html nav a:active span,
+  html nav a.active span {
+    display: none;
+  }
 }
 html nav a i {
   display: none;
 }
-@media only screen and (max-device-width: 415px), only screen and (max-width: 415px) {
+@media only screen and (max-device-width: 769px), only screen and (max-width: 769px) {
   html nav a i {
     display: inline;
     color: #000;
@@ -273,7 +290,7 @@ html nav a span {
   color: #000;
   font-weight: 400;
 }
-@media only screen and (max-device-width: 415px), only screen and (max-width: 415px) {
+@media only screen and (max-device-width: 769px), only screen and (max-width: 769px) {
   html nav a span {
     display: none;
   }
@@ -286,8 +303,14 @@ html p {
   text-align: justify;
   font-size: 0.8em;
 }
+@media only screen and (max-device-width: 769px), only screen and (max-width: 769px) {
+  html blockquote,
+  html p {
+    font-weight: 200;
+  }
+}
 html section {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.3);
   color: #ffffff;
   position: absolute;
   z-index: 1;
@@ -304,6 +327,10 @@ html section {
   -o-filter: blur(0.1em);
   -ms-filter: blur(0.1em);
   filter: blur(0.1em);
+}
+html section#portfolio a {
+  text-decoration: none;
+  font-weight: 500;
 }
 @media only screen and (max-device-width: 415px), only screen and (max-width: 415px) {
   html section {
@@ -378,8 +405,16 @@ html section ul.contact-channels li a {
 html section ul.contact-channels li a i {
   margin-right: 1em;
 }
+html section ul.contact-channels li a span {
+  font-weight: 200;
+}
 html section ul.contact-channels li a span.mobile {
   display: none;
+}
+@media only screen and (max-device-width: 769px), only screen and (max-width: 769px) {
+  html section ul.contact-channels li a span {
+    font-weight: 300;
+  }
 }
 @media only screen and (max-device-width: 415px), only screen and (max-width: 415px) {
   html section ul.contact-channels li a span.mobile {
