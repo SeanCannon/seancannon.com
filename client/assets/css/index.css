@@ -345,6 +345,10 @@ html section#portfolio a {
     left: 10px;
     width: auto;
     right: 10px;
+  }
+}
+@media only screen and (max-device-width: 769px), only screen and (max-width: 769px) {
+  html section {
     -webkit-overflow-scrolling: touch;
   }
 }
