@@ -32,7 +32,6 @@ thead,
 tbody,
 tfoot,
 tr,
-tr,
 td,
 article,
 aside,
@@ -65,7 +64,6 @@ pre,
 a,
 abbr,
 address,
-cit,
 code,
 del,
 dfn,
@@ -136,14 +134,12 @@ a img {
 .noTextSelect {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
-  -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  standard-user-select: none;
 }
 * {
-  font-family: 'Helvetica Neue', Roboto, 'Helvetica', 'Arial', 'sans-serif';
+  font-family: 'Helvetica Neue', Roboto, 'Helvetica', 'Arial', sans-serif;
   font-weight: 100;
   color: #FFF;
 }
@@ -331,8 +327,6 @@ html section {
   transition: all linear 0.3s;
   font-weight: 800;
   -webkit-filter: blur(0.1em);
-  -moz-filter: blur(0.1em);
-  -o-filter: blur(0.1em);
   -ms-filter: blur(0.1em);
   filter: blur(0.1em);
 }
@@ -359,8 +353,6 @@ html section:target {
   font-weight: 100;
   text-shadow: 0 0 #000;
   -webkit-filter: blur(0);
-  -moz-filter: blur(0);
-  -o-filter: blur(0);
   -ms-filter: blur(0);
   filter: blur(0);
 }

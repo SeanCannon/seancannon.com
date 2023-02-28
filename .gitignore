@@ -2,3 +2,5 @@
 .DS_Store
 *.LOG
 *.db
+
+client/assets/.DS_Store
